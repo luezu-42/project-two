@@ -8,21 +8,23 @@ function Contriesdetails(props) {
     useEffect(()=>{
         async function fetchData() {
             const { name } = props.match.params
-            const reponse = await Axios.get(`https://travelbriefing.org/${name}?format=json`);
+            const response = await Axios.get(`https://travelbriefing.org/${name}?format=json`);
             
-            setContries({reponse})
+            setContries({response})
 
-            console.log(reponse)
+            console.log(response)
         }
 
         fetchData()
         
         
-    }, [props])
-    console.log(contries.reponse.data.timezone.name)
+    }, [contries])
+    console.log(contries.response.data.timezone.name)
     return (
-        <>
-            <div>{contries.timezone}</div>
+        <>  
+            <div>{contries.response.data.language[0].language}</div>
+            <div>{contries.response.data.currency.name}</div>
+            <div>{contries.response.data.timezone.name}</div>
         </>
     )
 }
