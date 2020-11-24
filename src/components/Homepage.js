@@ -48,6 +48,8 @@ function Homepage() {
         </div>
       </div>
 
+        <Link to='/ticket'>COMPRAAAA</Link>
+
       <div className="containerInfos">
         <div className="infos">
           <img src={Money} className="imgInf"></img>

@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Contriesdetails from './components/Contriesdetails';
-import Homepage from './components/Homepage'
+import Homepage from './components/Homepage';
+import Ticket from './components/Ticketapi';
 import "./style/style.css";
 
 function App(props) {
@@ -11,7 +12,8 @@ function App(props) {
       <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path='/:name' component={Contriesdetails}/>
+            <Route exact path='/ticket' component={Ticket}/>
+            <Route path='/:name' component={Contriesdetails}/>     
         </Switch>
       </BrowserRouter>
     </>

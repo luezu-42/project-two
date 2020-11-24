@@ -18,13 +18,11 @@ function Contriesdetails(props) {
         fetchData()
         
         
-    }, [contries])
-    console.log(contries.response.data.timezone.name)
+    }, [props])
+    console.log(contries.response.data.electricity.voltage)
     return (
         <>  
-            <div>{contries.response.data.language[0].language}</div>
-            <div>{contries.response.data.currency.name}</div>
-            <div>{contries.response.data.timezone.name}</div>
+            Oi
         </>
     )
 }
