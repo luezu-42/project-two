@@ -49,6 +49,8 @@ function Homepage() {
       </div>
 
         <Link to='/ticket'>COMPRAAAA</Link>
+        <br></br>
+        <Link to='./maps'>MAPAAAAA</Link>
 
       <div className="containerInfos">
         <div className="infos">
