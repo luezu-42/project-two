@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+
+import Maps from './Maps'
 
 function CountriesDetails(props) {
     const [countries, setCountries] = useState({
@@ -14,6 +15,7 @@ function CountriesDetails(props) {
         weather: {January: {tAvg: ''}, February: {tAvg: ''}, March: {tAvg: ''}, April: {tAvg: ''}, May: {tAvg: ''}, June: {tAvg: ''}, July: {tAvg: ''}, August: {tAvg: ''}, September: {tAvg: ''}, October: {tAvg: ''}, November: {tAvg: ''}, December: {tAvg: ''}},
         advise: {UA: {advise: '', url: ''}, CA: {advise: '', url: ''}},
         neighbors: [{name: ''}],
+        maps:{lat:"", long:""}
     });
 
     useEffect(()=>{
@@ -30,7 +32,7 @@ function CountriesDetails(props) {
         fetchData()       
     }, [countries])
    
-    console.log(countries.advise.CA.advise) 
+    console.log(countries.maps) 
 
     const rate = countries.currency.rate;
 
@@ -41,19 +43,21 @@ function CountriesDetails(props) {
                 <h1>{countries.names.name}</h1>
                 <h3>{countries.names.full}, {countries.names.continent}</h3>
                 <p>Timezone: {countries.timezone.name}</p>
-                <p>Language: {countries.language.map((language, i) => (
-                    <div key={i} >{language.language}</div> 
-                ))} </p>
-                <p>Official language? {countries.language.map((language, i) => (
-                    <div key={i} >{language.official}</div> 
-                ))} </p>
+
+                <div>Language: {countries.language.map((language, i) => (
+                    <p key={i} >{language.language}</p> 
+                ))} </div>
+
+                <div>Official language? {countries.language.map((language, i) => (
+                    <p key={i} >{language.official}</p> 
+                ))} </div>
             </div>
             <div>
                 <h4>Electricity:</h4> 
                  <p>Voltage: {countries.electricity.voltage}v</p>
-                <p>Plugs: {countries.electricity.plugs.map((plug, i) => (
-                    <div key={i}>{plug}</div>
-                ))}</p>
+                <div>Plugs: {countries.electricity.plugs.map((plug, i) => (
+                    <p key={i}>{plug}</p>
+                ))}</div>
             </div>
             <div>
                 <h4>Telephones:</h4>
@@ -64,9 +68,9 @@ function CountriesDetails(props) {
             </div>
             <div>
                 <h4>Vaccinations:</h4>
-                <p>{countries.vaccinations.map((vaccine, i) => (
-                    <div key={i}><p>{vaccine.name}</p> <p>{vaccine.message}</p></div>
-                ))}</p>
+                <div>{countries.vaccinations.map((vaccine, i) => (
+                    <p key={i}><p>{vaccine.name}</p> <p>{vaccine.message}</p></p>
+                ))}</div>
             </div>
             <div>
                 <h4>Currency:</h4>
@@ -121,10 +125,12 @@ function CountriesDetails(props) {
             </div>
             <div>
                 <h3>Neighbors:</h3>
-                <p>{countries.neighbors.map((name, i) => (
-                    <div key={i} >{name.name}</div> 
-                ))} </p>
+                <div>{countries.neighbors.map((name, i) => (
+                    <p key={i} >{name.name}</p> 
+                ))} </div>
             </div>
+
+            <Maps/>
 
         </div>
     );
