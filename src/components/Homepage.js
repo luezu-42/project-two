@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "./Searchbar";
+import Router from 'react-router-dom'
 
 import Money from "../img/iStock-960079552-864x520.jpg";
 import Road from "../img/road_asphalt_turn_193187_1920x1080.jpg";
 import City from "../img/city_buildings_sunset_193193_1920x1080.jpg";
 
-function Homepage() {
+import ContriesDetails from './CountriesDetails'
+
+function Homepage(props) {
+  const [classe, setClasse] = useState({
+    className:"container",
+  })
+  
   const [countriesInfo, setCountriesInfo] = useState([
     {
       countriesList: [],
       isLoading: true,
     },
   ]);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -34,24 +41,34 @@ function Homepage() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    console.log(countriesInfo);
-  }, [countriesInfo]);
+
+    function handleScroll() {
+      if(document.documentElement.scrollTop > 260){
+       setClasse({className:"testeDet"})
+      }else{
+        setClasse({className:"container"})
+      }
+    }
+
+    useEffect(()=>{
+      window.onscroll = () => handleScroll()
+    })
+
+
 
   return (
-    <div>
+    <div className='first'>
+      <div>
       <div className="HomeP">
+   
         <div className="Wall"></div>
-
-        <div className="container">
+          <div className="titulo">Wanderlust</div>
+        <div className={classe.className}>
           <SearchBar />
         </div>
+        
       </div>
-
-        <Link to='/ticket'>COMPRAAAA</Link>
-        <br></br>
-        <Link to='./maps'>MAPAAAAA</Link>
-
+    
       <div className="containerInfos">
         <div className="infos">
           <img src={Money} className="imgInf"></img>
@@ -80,6 +97,9 @@ function Homepage() {
           </div>
         </div>
       </div>
+      </div>
+
+
     </div>
   );
 }
