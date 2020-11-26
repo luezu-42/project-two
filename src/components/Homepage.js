@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./Searchbar";
-import Router from 'react-router-dom'
 
 import Money from "../img/iStock-960079552-864x520.jpg";
 import Road from "../img/road_asphalt_turn_193187_1920x1080.jpg";
 import City from "../img/city_buildings_sunset_193193_1920x1080.jpg";
 
-import ContriesDetails from './CountriesDetails'
 
 function Homepage(props) {
   const [classe, setClasse] = useState({
@@ -64,7 +62,7 @@ function Homepage(props) {
         <div className="Wall"></div>
           <div className="titulo">Wanderlust</div>
         <div className={classe.className}>
-          <SearchBar />
+          <SearchBar homepage={true}/>
         </div>
         
       </div>

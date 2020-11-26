@@ -1,70 +1,25 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1>Wanderlust</h1>
+<p>Wanderlust is a page built using ReactJS.</p>
+<p>The page must be used on mobile version.</p>
+<p>Wanderlust was built using two APIs, one with the countries' information and another one using a map to provide the location of each country.</p>
+<p>Click <a href="https://wanderlust-p.herokuapp.com/" target="_blank">HERE</a> to access the page!</p>
+<p>And <a href="https://docs.google.com/presentation/d/1LwbtnVnNCZupwQuBk5Xom5D0zRDk-KbU3v8aq7GmgNg/edit#slide=id.g35f391192_09" target="_blank">HERE</a> you can find our project presentation!</p>
+<h2>About</h2>
+<p>It's an application to help users to find important information about their destination when they are planning a trip.</p>
+<p>Feel free to make your search!</p>
+<h2>How to Use</h2>
+<ul>
+<li>Write the name of the country that you are interested in.</li>
+<li>Press SEARCH and then the information will show up.</li>
+<li>Use the Search bar as many times as you want.</li>
+<li>Good search!</li>
+</ul>
+<h2>Contribution</h2>
+<p>This is a free software, feel free to contribute in any way you want</p>
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (git checkout -b feature/fooBar)</li>
+<li>Commit your changes (git commit -am 'Add some fooBar')</li>
+<li>Push to the branch (git push origin feature/fooBar)</li>
+<li>Create a new Pull Request</li>
+</ol>

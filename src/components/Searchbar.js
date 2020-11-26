@@ -48,7 +48,7 @@ function SearchBar(props) {
         onChange={handleChange}
       />
         <Link to={`/${countries}?format=json`}>
-          <button className="bnt-r">Search</button>
+  <button className="bnt-r">{props.homepage ? "Search" : <img style={{height:"20px", width:"20px"}} src={Lupa}></img>}</button>
         </Link>
     </>
   );
