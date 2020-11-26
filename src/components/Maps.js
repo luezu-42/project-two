@@ -1,9 +1,12 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import Axios from 'axios'
 import L from 'leaflet'
 import Red from '../img/leaf-red.png'
 import Shadow from '../img/leaf-shadow.png'
-function Maps() {
+
+function Maps(props) {
+    const [mapi, setMapi] = useState([])
 
     var myIcon = L.icon({
         iconUrl: Red,
@@ -14,11 +17,23 @@ function Maps() {
         shadowSize: [68, 95],
         shadowAnchor: [22, 94]
     });
+
+//    useEffect(()=>{
+//      async function patchData(){
+//        const {lat, long} = await props.maps;
+//        
+//       setMapi([Number(lat),Number(long)])
+//
+//      }
+//      patchData()
+//      
+//    }, [props])
+// console.log(mapi)
   return (
     <>
       <MapContainer
         className="MAPA"
-        center={[23.6266557, -102.5375005]}
+        center={[1,1]}
         zoom={4}
         scrollWheelZoom={false}
       >
@@ -27,7 +42,7 @@ function Maps() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={[23.6266557, -102.5375005]}
+          position={[1,1]}
           icon={myIcon}
         >
           <Popup>AGORA FOI.</Popup>
