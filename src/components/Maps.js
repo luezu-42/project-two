@@ -4,9 +4,17 @@ import Axios from 'axios'
 import L from 'leaflet'
 import Red from '../img/leaf-red.png'
 import Shadow from '../img/leaf-shadow.png'
+import { MapInteractionCSS } from 'react-map-interaction';
 
 function Maps(props) {
-    const [mapi, setMapi] = useState([])
+    const [mapi, setMapi] = useState([
+      1,1
+    ])
+
+    const [mapa, setMapa] = useState({
+      scale:1,
+      translation: { x: 0, y: 0 }
+    })
 
     var myIcon = L.icon({
         iconUrl: Red,
@@ -18,22 +26,23 @@ function Maps(props) {
         shadowAnchor: [22, 94]
     });
 
-//    useEffect(()=>{
-//      async function patchData(){
-//        const {lat, long} = await props.maps;
-//        
-//       setMapi([Number(lat),Number(long)])
-//
-//      }
-//      patchData()
-//      
-//    }, [props])
-// console.log(mapi)
+    useEffect(()=>{
+     const {lat, long} =  props.maps;
+      if(lat && long){
+        setMapi([Number(lat),Number(long)])
+
+      }
+
+    }, [props.maps])
+
+
+
   return (
     <>
+    <MapInteractionCSS>
       <MapContainer
         className="MAPA"
-        center={[1,1]}
+        center={mapi}
         zoom={4}
         scrollWheelZoom={false}
       >
@@ -42,12 +51,14 @@ function Maps(props) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={[1,1]}
+          position={mapi}
           icon={myIcon}
         >
           <Popup>AGORA FOI.</Popup>
         </Marker>
       </MapContainer>
+
+      </MapInteractionCSS>
     </>
   );
 }

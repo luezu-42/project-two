@@ -318,6 +318,9 @@ body {
     margin: 20px;
     margin-bottom: 60px;
     z-index: -1;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-size: cover;
   }
   .flooter {
     width: 375px;
@@ -348,19 +351,31 @@ body {
   .navMob{
       position: fixed;
       width: 100%;
-      bottom: 6vh;
+      bottom: 0vh;
       display: flex;
       background-color: #ffffff;
       z-index: 2;
       height: 43px;
+      transition: 100ms;
       justify-content: space-around;
-
+    
   }
   .iconM{
       border: solid #fa2152 1px;
       padding-right: 40px;
       padding-left: 40px;
       height: 43px;
+  }
+  .navBotton{
+    position: fixed;
+      width: 100%;
+      bottom: 5vh;
+      display: flex;
+      background-color: #ffffff;
+      z-index: 2;
+      height: 43px;
+      justify-content: space-around;
+      transition: 200ms;
   }
 }
 
