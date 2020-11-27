@@ -32,7 +32,6 @@ function CountriesDetails(props) {
       November: { tAvg: "" },
       December: { tAvg: "" },
     },
-    advise: { UA: { advise: "", url: "" }, CA: { advise: "", url: "" } },
     neighbors: [{ name: "" }],
     maps: { lat: "", long: "" },
   });
@@ -70,7 +69,7 @@ function CountriesDetails(props) {
   });
 
   function handleScroll() {
-    if (window.scrollY < 580) {
+    if (window.scrollY < 450) {
       setNavbutton({ className: "navMob" });
     } else {
       setNavbutton({ className: "navBotton" });
@@ -265,17 +264,6 @@ function CountriesDetails(props) {
           </div>
         </div>
 
-        <div style={{ paddingTop: "20px", paddingLeft: "20px" }}>
-          <h4>Advise</h4>
-          <p>
-            {countries.advise.UA.advise}:{" "}
-            <a target="_blank" href={countries.advise.UA.url}>
-              {countries.advise.UA.url}
-            </a>
-          </p>
-        </div>
-      </div>
-
       <h4
         style={{
           paddingTop: "20px",
@@ -298,14 +286,15 @@ function CountriesDetails(props) {
           <img className="iconM" src={Home}></img>
         </Link>
 
-        <Link to="/">
+        <Link to="/abouttheproject">
           <img className="iconM" src={Mark}></img>
         </Link>
-        <Link to="/">
+        <Link to="/aboutus">
           <img className="iconM" src={About}></img>
         </Link>
       </div>
-    </>
+    </div>
+  </>
   );
 }
 

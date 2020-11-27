@@ -26,40 +26,39 @@ function Maps(props) {
         shadowAnchor: [22, 94]
     });
 
-    useEffect(()=>{
-     const {lat, long} =  props.maps;
-      if(lat && long){
-        setMapi([Number(lat),Number(long)])
-
-      }
-
-    }, [props.maps])
+  //  useEffect(()=>{
+  //   const {lat, long} =  props.maps;
+  //    if(lat && long){
+  //      setMapi([Number(lat),Number(long)])
+//
+  //    }
+//
+  //  }, [props.maps])
 
 
 
   return (
-    <>
-    <MapInteractionCSS>
+    
       <MapContainer
         className="MAPA"
-        center={mapi}
+        center={[-14.2401,-53.1805]}
         zoom={4}
         scrollWheelZoom={false}
+        dragging={true}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={mapi}
+          position={[-14.2401,-53.1805]}
           icon={myIcon}
         >
           <Popup>AGORA FOI.</Popup>
         </Marker>
       </MapContainer>
 
-      </MapInteractionCSS>
-    </>
+    
   );
 }
 

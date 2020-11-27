@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./Searchbar";
+import { Link } from "react-router-dom";
 
-import Money from "../img/iStock-960079552-864x520.jpg";
-import Road from "../img/road_asphalt_turn_193187_1920x1080.jpg";
-import City from "../img/city_buildings_sunset_193193_1920x1080.jpg";
+import ProjectPicture from "../img/imgAboutTheProject.jpg";
+import AboutPicture from "../img/imgAboutUs.jpg";
+import Wanderlust from "../img/imgWanderlust.jpg";
 
 
 function Homepage(props) {
@@ -69,36 +70,36 @@ function Homepage(props) {
     
       <div className="containerInfos">
         <div className="infos">
-          <img src={Money} className="imgInf"></img>
+        <Link to="/abouttheproject">
+          <img src={ProjectPicture} className="imgInf"></img>
+        
           <div className="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            About Wanderlust
           </div>
+          </Link>
         </div>
 
         <div className="infos">
-          <img src={Road} className="imgInf"></img>
+        <Link to="/aboutus">
+          <img src={AboutPicture} className="imgInf"></img>
+        
           <div className="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            About Us
+          </div>
+          </Link>
+        </div>
+        <div className="infos">
+          <img src={Wanderlust} className="imgInf"></img>
+          <div className="text">
+            Wanderlust Definition
           </div>
         </div>
-
-        <div className="infos">
-          <img src={City} className="imgInf"></img>
-          <div className="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </div>
         </div>
       </div>
       </div>
 
 
-    </div>
+    
   );
 }
 
