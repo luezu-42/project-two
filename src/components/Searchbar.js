@@ -36,6 +36,8 @@ function SearchBar(props) {
   //  window.onscroll = () => handleScroll()
   //})
 
+  //{props.homepage ? "Search" : <img style={{height:"20px", width:"20px"}} src={Lupa}></img>}
+
   return (
     <>
       <input
@@ -48,7 +50,7 @@ function SearchBar(props) {
         onChange={handleChange}
       />
         <Link to={`/${countries}?format=json`}>
-  <button className="bnt-r">{props.homepage ? "Search" : <img style={{height:"20px", width:"20px"}} src={Lupa}></img>}</button>
+  <button className="bnt-r">Search</button>
         </Link>
     </>
   );

@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
+import AboutCreaters from "./components/AboutCreators";
+import AboutProject from "./components/AboutProject";
 import CountriesDetails from './components/CountriesDetails';
 import Homepage from './components/Homepage';
 import Maps from './components/Maps'
@@ -11,11 +13,11 @@ function App() {
     <>
       <BrowserRouter>
         <Switch>
-            <Route exact path="/" component={Homepage} />
+        <Route exact path="/" component={Homepage} />
             <Route exact path='/maps' component={Maps}/>
-            <Route path='/:name' component={CountriesDetails}/>
-
-        
+            <Route exact path="/aboutus" component={AboutCreaters}/>
+            <Route exact path="/abouttheproject" component={AboutProject}/>
+            <Route path='/:name' component={CountriesDetails}/> 
         </Switch>
       </BrowserRouter>
       
