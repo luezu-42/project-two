@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.252b3f49.chunk.css",
+    "main.js": "/static/js/main.769ca1c7.chunk.js",
+    "main.js.map": "/static/js/main.769ca1c7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3bb0e805.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3bb0e805.js.map",
+    "static/js/2.b2e96859.chunk.js": "/static/js/2.b2e96859.chunk.js",
+    "static/js/2.b2e96859.chunk.js.map": "/static/js/2.b2e96859.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.252b3f49.chunk.css.map": "/static/css/main.252b3f49.chunk.css.map",
+    "static/js/2.b2e96859.chunk.js.LICENSE.txt": "/static/js/2.b2e96859.chunk.js.LICENSE.txt",
+    "static/media/imgAboutTheProject.a37754da.jpg": "/static/media/imgAboutTheProject.a37754da.jpg",
+    "static/media/imgAboutUs.0fa0c440.jpg": "/static/media/imgAboutUs.0fa0c440.jpg",
+    "static/media/imgWanderlust.a4edc409.jpg": "/static/media/imgWanderlust.a4edc409.jpg",
+    "static/media/style.css": "/static/media/landscape_mountains_lake_160353_1920x1080.9df652fa.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3bb0e805.js",
+    "static/js/2.b2e96859.chunk.js",
+    "static/css/main.252b3f49.chunk.css",
+    "static/js/main.769ca1c7.chunk.js"
+  ]
+}
