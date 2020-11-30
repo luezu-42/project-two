@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-import Lupa from '../img/loupe.png'
 
 function SearchBar(props) {
   const [countries, setCountries] = useState({

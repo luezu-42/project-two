@@ -104,7 +104,7 @@ function CountriesDetails(props) {
             <div className="content">
               {countries.language.map((language, i) => {
                 let native = false;
-                if (language.official == "Yes") {
+                if (language.official === "Yes") {
                   native = true;
                 } else {
                   native = false;
@@ -282,14 +282,14 @@ function CountriesDetails(props) {
 
       <div className={navButton.className}>
         <Link to="/">
-          <img className="iconM" src={Home}></img>
+          <img className="iconM" src={Home} alt='home'></img>
         </Link>
 
         <Link to="/abouttheproject">
-          <img className="iconM" src={Mark}></img>
+          <img className="iconM" src={Mark} alt='aboutus'></img>
         </Link>
         <Link to="/aboutus">
-          <img className="iconM" src={About}></img>
+          <img className="iconM" src={About} alt='aboutpr'></img>
         </Link>
       </div>
     </div>
