@@ -81,7 +81,6 @@ function CountriesDetails(props) {
   });
 
 
-
   return (
     <>
       <div className="detail">
@@ -273,7 +272,7 @@ function CountriesDetails(props) {
       >
         Map
       </h4>
-      <Maps {...countries} />
+      <Maps {...countries} {...props.match} />
       <Link to="/">
         <div className="title">Wanderlust</div>
       </Link>

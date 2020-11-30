@@ -37,7 +37,7 @@ function Maps(props) {
 
   useEffect(() => {
     setMapi([1, 1]);
-  }, [props.params]);
+  }, [props.params.name]);
 
   function renderMap() {
     if (mapi[0] !== 1 && mapi[1] !== 1) {
