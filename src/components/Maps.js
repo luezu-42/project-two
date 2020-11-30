@@ -4,9 +4,7 @@ import {
   TileLayer,
   Popup,
   Marker,
-  useMapEvents,
 } from "react-leaflet";
-import Axios from "axios";
 import L from "leaflet";
 import Red from "../img/leaf-red.png";
 import Shadow from "../img/leaf-shadow.png";
